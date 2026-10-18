@@ -18,7 +18,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Isi BUILD di sw.js
+      - name: Isi BUILD di sw.js (agar cache otomatis diperbarui)
         run: sed -i "s/__BUILD__/${GITHUB_SHA::8}/" sw.js
       - name: Isi URL situs di meta tag
         run: |
