@@ -14,6 +14,16 @@ Game idle RPG bayangan yang berjalan langsung di browser dan bisa dipasang seper
 | `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Pendukung GitHub Pages dan SEO |
 | `.github/workflows/pages.yml` | Deploy otomatis ke GitHub Pages |
 
+## Tutorial & Panduan (baru)
+
+Semuanya ada di dalam `index.html` (blok `<!-- BEGIN TUTORIAL -->` sampai `<!-- END TUTORIAL -->`), tanpa file tambahan.
+
+- **Tutorial interaktif** (spotlight, 33 langkah): otomatis berjalan untuk pemain baru. Pemain lama mendapat tawaran satu kali. Bisa diulang di **Pengaturan > Ulangi Tutorial**.
+- **Pusat Panduan** (33 artikel, bisa dicari): **Pengaturan > Panduan Bermain**, atau tombol **?** di header panel (membuka bantuan sesuai tab). Tabel skill, pet, karakter, senjata, area, dan cuaca dibangkitkan dari data game sehingga selalu sinkron.
+- **Petunjuk kontekstual**: banner singkat muncul saat bos pertama, musuh elit, Ultimate siap, HP kritis, fitur baru terbuka (stage 2/4/6/7/8), dan sebagainya. Bisa dimatikan di Pengaturan.
+- Pengaturan modul ada di awal blok: `REWARD` (hadiah sekali untuk yang menamatkan tutorial, kosongkan `{}` untuk menonaktifkan), `HINT_GAP`, `HINT_SHOW`. Isi langkah ada di `STEPS`, petunjuk di `HINTS`, artikel di `ART`.
+- Status tersimpan di `S.tut` (ikut tersimpan/ekspor bersama progres).
+
 ## Cara pasang di GitHub Pages
 
 1. Buat repository baru, misalnya `shadow-awakening` (Public).
