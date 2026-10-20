@@ -1,0 +1,36 @@
+/* =====================================================================
+   Shadow Awakening: Distorsi - UPGRADE v5 (CSS)
+   Dimuat SETELAH style.css. Memperbaiki HUD, tombol skill, dan tata letak.
+   ===================================================================== */
+
+/* ---------- HUD atas: dua kartu sama lebar, sejajar, tidak saling menimpa ---------- */
+#app #hud{gap:6px;padding-left:8px;padding-right:8px;align-items:stretch}
+#app .pf{flex:1 1 0;min-width:0;max-width:50%;height:56px;padding:4px 8px;overflow:hidden;box-sizing:border-box}
+#app .pf>div{min-width:0;flex:1}
+#app .pf>div>div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25}
+#app #pw{white-space:nowrap;font-variant-numeric:tabular-nums}
+#app .cur{flex:1 1 0;min-width:0;max-width:50%;height:56px;display:grid;grid-template-rows:1fr 1fr;gap:4px;align-items:stretch}
+#app .cur span{min-width:0;width:100%;height:100%;padding:0 8px;box-sizing:border-box;justify-content:flex-start;gap:6px;overflow:hidden;white-space:nowrap;font-size:13px;font-variant-numeric:tabular-nums;border-radius:10px}
+
+/* ---------- Label stage & bar bos diturunkan agar tidak menabrak HUD ---------- */
+#app #sl{top:calc(env(safe-area-inset-top,0px) + 66px);font-size:14px;pointer-events:none}
+#app #sbw{width:150px;height:6px;margin:2px auto}
+#app #bb{top:calc(env(safe-area-inset-top,0px) + 100px);left:16%;right:16%;pointer-events:none}
+
+/* ---------- Kolom tombol kiri & kanan: rapi, tidak bertumpuk ---------- */
+#app #wxc{top:calc(env(safe-area-inset-top,0px) + 134px);max-width:46%;box-sizing:border-box}
+#app #spb{top:calc(env(safe-area-inset-top,0px) + 176px);left:8px;min-width:44px;text-align:center}
+#app #gf{top:calc(env(safe-area-inset-top,0px) + 134px);right:8px;min-width:70px;text-align:center;box-sizing:border-box}
+#app #qb{top:calc(env(safe-area-inset-top,0px) + 168px);right:8px;min-width:70px;text-align:center;box-sizing:border-box}
+#app #mp{top:calc(env(safe-area-inset-top,0px) + 202px);right:8px;min-width:70px;text-align:center;box-sizing:border-box}
+
+/* ---------- Mode sinematik: bar hitam tidak lagi menutup / memblokir tombol ---------- */
+#app .bt1,#app .bt2{pointer-events:none!important;height:6%!important}
+#app #ctl{z-index:8}
+#app #ctl .sb{pointer-events:auto;position:relative;z-index:9}
+
+/* ---------- Angka panjang di panel ---------- */
+#app .row{flex-wrap:wrap}
+#app .row span{min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#app .it b{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#app .ic .nm{max-width:100%}
