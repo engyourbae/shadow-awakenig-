@@ -1,16 +1,14 @@
 /* Shadow Awakening: Distorsi - Service Worker
-   Strategi:
-   - Halaman (navigasi)      : jaringan dulu (maks 3,5 dtk), jika offline pakai salinan cache
-   - File game/ikon (1 domain): cache dulu, perbarui diam-diam di belakang (stale-while-revalidate)
-   - Google Fonts             : cache dulu (font tidak berubah)
-   Nilai BUILD diganti otomatis oleh GitHub Actions (lihat .github/workflows/pages.yml).
-   Jika upload manual, ganti BUILD secara manual tiap kali merilis versi baru agar pemain mendapat pembaruan. */
+   - Halaman (navigasi): jaringan dulu (maks 3,5 dtk), jika offline pakai cache
+   - File game/ikon (1 domain): cache dulu, perbarui diam-diam (stale-while-revalidate)
+   - Google Fonts: cache dulu
+   BUILD diganti otomatis oleh GitHub Actions. Jika upload manual, ganti BUILD tiap rilis. */
 const BUILD = '__BUILD__';
 const VERSION = 'sa-' + BUILD;
 const RUNTIME = VERSION + '-rt';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'favicon.ico',
-  'upgrade.css', 'upgrade.js',
+  'upgrade.css', 'upgrade.js', 'upgrade6.js',
   'icons/favicon.svg', 'icons/logo.svg',
   'icons/icon-192.png', 'icons/icon-512.png',
   'icons/maskable-192.png', 'icons/maskable-512.png',
