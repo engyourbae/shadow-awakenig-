@@ -228,7 +228,7 @@ textarea{user-select:text;-webkit-user-select:text}
 (function(){var si=window.setInterval.bind(window);window.setInterval=function(f,t){var a=[].slice.call(arguments,2);return si(function(){if(document.hidden)return;return f.apply(null,a)},t)}})();
 'use strict';
 const $=s=>document.querySelector(s),R=(a,b)=>a+Math.random()*(b-a),RI=(a,b)=>Math.floor(R(a,b+1)),pick=a=>a[RI(0,a.length-1)],cl=(v,a,b)=>Math.max(a,Math.min(b,v));
-const F=n=>n>=1e6?(n/1e6).toFixed(2)+'M':n>=1e4?(n/1e3).toFixed(1)+'K':n>=1e3?(n/1e3).toFixed(2)+'K':String(Math.round(n));
+let F=n=>n>=1e6?(n/1e6).toFixed(2)+'M':n>=1e4?(n/1e3).toFixed(1)+'K':n>=1e3?(n/1e3).toFixed(2)+'K':String(Math.round(n));
 const csv=t=>{const[h,...r]=t.trim().split('\n'),k=h.split(',');return r.map(l=>{const v=l.split(','),o={};k.forEach((x,i)=>o[x]=v[i]!==''&&!isNaN(v[i])?+v[i]:v[i]);return o})};
 
 const D={items:csv(`slot,atk,hp,names
@@ -2461,4 +2461,6 @@ if('serviceWorker' in navigator){
   });
 }
 </script>
-</body></html>
+<link rel="stylesheet" href="upgrade.css"><script src="upgrade.js"></script>
+</body>
+</html>
