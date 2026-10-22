@@ -377,14 +377,5 @@ function extra(rd){
     if(Math.random()<.35)G.fx.push({k:'sm',x:tx,y:G.by,vx:R(10,40),vy:-30,l:.5,m:.5,r:9});
   });
 }
-  ...kode `extra(rd)` yang lama...
-}
-
-/* ===== PERBAIKAN LAYAR HITAM ===== */
-try{[S.eq.weapon].concat(S.bag).forEach(it=>{if(it&&it.s==='weapon'&&!WT[it.wt||0]){it.wt=0;fit(it)}})}catch(e){}
-if(!G.P||!document.querySelector('#nav .nv')){
-  try{boot();window.__gameReady&&window.__gameReady();console.warn('upgrade.js: boot dipulihkan')}
-  catch(e){console.error('upgrade.js: boot gagal',e)}
-}
 console.log('Shadow Awakening upgrade v5 aktif');
 })();
