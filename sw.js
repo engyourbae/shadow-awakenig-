@@ -8,7 +8,7 @@ const VERSION = 'sa-' + BUILD;
 const RUNTIME = VERSION + '-rt';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'favicon.ico',
-  'upgrade.css', 'upgrade.js', 'upgrade6.js',
+  'upgrade.css', 'upgrade.js', 'upgrade6.js', 'upgrade7.js',
   'icons/favicon.svg', 'icons/logo.svg',
   'icons/icon-192.png', 'icons/icon-512.png',
   'icons/maskable-192.png', 'icons/maskable-512.png',
