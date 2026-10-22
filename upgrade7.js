@@ -514,4 +514,10 @@ W_.tick=function(rd){
 };
 console.log('Shadow Awakening upgrade v7 aktif');
 }
+/* ===== PERBAIKAN LAYAR HITAM (jalan setelah v5, v6, v7 terpasang) ===== */
+try{[S.eq.weapon].concat(S.bag).forEach(it=>{if(it&&it.s==='weapon'&&!WT[it.wt||0]){it.wt=0;fit(it)}})}catch(e){}
+if(!G.P||!document.querySelector('#nav .nv')){
+  try{boot();window.__gameReady&&window.__gameReady();console.warn('upgrade7.js: boot dipulihkan')}
+  catch(e){console.error('upgrade7.js: boot gagal',e)}
+}
 })();
